@@ -1,0 +1,217 @@
+html{
+    color: #fff; /* todas letras */
+    scroll-behavior: smooth; /* faz a rolagem ficar suave */
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    margin: 0 auto; /* margem 0 em cima e em baixo e auto da direita e esquerda */
+    max-width: 1120px;
+    background: linear-gradient(150deg, #000000, #9e00ff);
+    background-size: 120% 120%;
+}
+
+.cabecalho{
+    display: flex; /* coloca os elementos um do lado do outro */
+    justify-content: space-between; /* espaço entre elementos */
+    align-items: center;
+    padding: 30px 15px; /* 30 em cima e embaixo e 15 na direita e esquerda */
+}
+
+.cabecalho .logo{
+    background-color: none;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%; /* circulo da logo */
+    border: 2px solid #fff;
+    text-decoration: underline; /* _ em baixo da letras */
+    text-align: center;
+    line-height: 55px; /* altura da linha */
+    font-family: "Raleway", sans-serif;
+    transition: 0.2s;
+}
+
+.cabecalho a:hover .logo{
+    color: #9443d8;
+    border: 2px solid #9443d8;
+}
+
+.cabecalho .menu li a{
+    font-size: 20px;
+    text-transform: capitalize; /* deixou a primeiras letras da frase maiuscula */
+    padding: 10px 20px; /* espaço interno */
+    transition: 0.2s;
+}
+
+.cabecalho .menu li a:hover{
+    background-color: #9443d8;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.home{
+    display: flex;
+    min-height: calc(100vh - 125px); /* o 125 é o tamanho do cabeçalho,o vh é altura de 100% */
+    align-items: center;
+    gap: 50px; /* separação entre elemetos */
+    justify-content: space-between;
+}
+
+.home .informacoes{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    letter-spacing: 2px; /* espaço entre as letras */
+    padding: 0 15px;
+    max-width: 50%;
+}
+
+.home .informacoes h1{
+    font-family: "Raleway", sans-serif;
+    font-size: 45px;
+    margin-bottom: 20px; /* margem de baixo */
+}
+
+.home .informacoes p{
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.home .redes-sociais{
+    display: flex;
+    gap: 20px;  /* espaço entre as linhas */
+}
+
+.home .redes-sociais a i{
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 26px;
+    transition: 0.3s;
+}
+
+.home .redes-sociais a i:hover{
+    color: #9443d8;
+    border: 1px solid #9443d8;
+    transform: scale(1.1);
+}
+
+.home .container-foto .foto{
+    max-width: 450px;
+    border-radius: 50%;
+}
+
+.home .container-foto img{
+    width: 100%;
+    border-radius: 50%; /* deixar a foto dentro do circulo */
+}
+
+.home .foto.sombra-interna{
+    background: linear-gradient(to right, #8A35C8, #00115e, #000000);
+    animation: gradient-animation 2s ease infinite;
+}
+
+.projetos{
+    padding: 70px 0 70px; /* 70 em cima 70 em baixo e 0 dos lados  */
+}
+
+.projetos .titulo{
+    text-align: center;
+    padding: 60px 0;
+    font-size: 45px;
+    font-weight: 500;
+    text-transform: uppercase; /* texto maiusculo */
+}
+
+.projetos .container-projetos{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* quebrar para baixo um do outro */
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.projetos .projeto{
+    max-width: 260px;
+    max-height: 500px;
+    position: relative; /* presisa para o position absolute */
+    display: none; /* pra tirar todos projetos da tela */
+}
+
+.projetos .projeto.ativo{
+    display: block; /* para mostrar apenas o projetos com classe ATIVO */
+}
+
+.projetos .projeto img{
+    height: 100%;
+}
+
+.projetos .projeto h3{
+    background-color: #040203;
+    width: 100%;
+    padding-left: 20px; /* para separa um pouco o texto  */
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: absolute; /* pra ter um efeito de profundidade, pra parecer que esta em cima da foto */ 
+    bottom: 0;
+}
+
+.projetos .projeto .informacoes-projeto{
+    background-color: #040203;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.projetos .container-projetos .projeto:hover .informacoes-projeto{
+    opacity: 0.7;
+    background-color: #000;
+}
+
+.projetos .btn-mostrar-projetos{
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    color: #fff;
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.projetos .btn-mostrar-projetos:hover{
+    background-color: #9443d8;
+    transition: 0.3s;
+}
+
+.projetos .btn-mostrar-projetos.remover{
+    display: none;
+}
+
+@keyframes gradient-animation {
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}

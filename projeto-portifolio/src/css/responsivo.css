@@ -1,0 +1,42 @@
+@media(max-width: 1280px) {
+
+    .cabecalho{
+        padding: 30px;  /* espaçamento de 30pixel de todos os lados */
+    }
+
+    .home{
+        flex-direction: column; /* colocou um abaixo do outro, para a visualização no cllr */
+        align-items: center; 
+        margin: 50px 0; /* 50 pra cima e baixo e 0 para os lados */
+        gap: 30px;
+    }
+
+    .home .informacoes{
+        max-width: 100%;    /* para o texto ocupar a tela toda */
+        text-align: center; /* centralizar texto */
+        align-items: center;    /* centralizar elementos, no caso foi as redes sociais*/
+    }
+
+    .projetos .container-projetos{
+        padding: 0 30px;    /* espaçamento 0 cima e baixo e 30 dos lados */
+    }
+}
+
+@media(max-width: 425px) {
+
+    .home .informacoes h1{
+        font-size: 30px;    /* diminuiu o titulo */
+    }
+
+    .home .informacoes p{
+        font-size: 16px;    /* diminuiu o tamanho das letras do texto */
+    }
+
+    .home .container-foto img{
+        max-width: 320px;   /* diminuiu a foto */
+    }
+
+    .projetos {
+        padding: 30px;
+    }
+}
