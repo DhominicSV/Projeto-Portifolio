@@ -7,8 +7,11 @@ body{
     font-family: "Poppins", sans-serif;
     margin: 0 auto; /* margem 0 em cima e em baixo e auto da direita e esquerda */
     max-width: 1120px;
-    background: linear-gradient(150deg, #000000, #9e00ff);
-    background-size: 120% 120%;
+    /* background: linear-gradient(150deg, #000000, #9e00ff);
+    background-size: 120% 120%; */
+    background-image: url("../imagens/fundo.png");
+    background-size: cover;
+    background-position: center;
 }
 
 .cabecalho{
@@ -31,7 +34,7 @@ body{
     transition: 0.2s;
 }
 
-.cabecalho a:hover .logo{
+.cabecalho a:hover .logo{  /* fundo das letras do cabeçalho */
     color: #9443d8;
     border: 2px solid #9443d8;
 }
@@ -138,12 +141,12 @@ body{
 .projetos .projeto{
     max-width: 260px;
     max-height: 500px;
-    position: relative; /* presisa para o position absolute */
+    position: relative; /* precisa para o position absolute */
     display: none; /* pra tirar todos projetos da tela */
 }
 
 .projetos .projeto.ativo{
-    display: block; /* para mostrar apenas o projetos com classe ATIVO */
+    display: block; /* para mostrar apenas os projetos com classe ATIVO */
 }
 
 .projetos .projeto img{
@@ -200,18 +203,4 @@ body{
 
 .projetos .btn-mostrar-projetos.remover{
     display: none;
-}
-
-@keyframes gradient-animation {
-    0%{
-        background-position: 0% 50%;
-    }
-
-    50%{
-        background-position: 100% 50%;
-    }
-
-    100%{
-        background-position: 0% 50%;
-    }
 }
